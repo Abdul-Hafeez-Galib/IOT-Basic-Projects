@@ -1,0 +1,55 @@
+int val; 
+
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  val = analogRead(A0);
+  Serial.println(val);
+  if(val>=76){
+    digitalWrite(12, HIGH);
+  }
+  if(val>=132){
+    digitalWrite(11, HIGH);
+  }
+  if(val>=188){
+    digitalWrite(10, HIGH);
+  }
+  if(val>=244){
+    digitalWrite(9, HIGH);
+  }
+  if(val>=300){
+    digitalWrite(8, HIGH);
+  }
+  if(val>=350){
+    digitalWrite(7, HIGH);
+  }
+  if(val>=300 && val<350){
+  	digitalWrite(7, LOW);
+  }
+  if(val>=244 && val<300){
+  	digitalWrite(8, LOW);
+  }
+  if(val>=188 && val<244){
+  	digitalWrite(9, LOW);
+  }
+  if(val>=132 && val<188){
+  	digitalWrite(10, LOW);
+  }
+  if(val>=76 && val<132){
+  	digitalWrite(11, LOW);
+  }
+  if(val<76){
+  	digitalWrite(12, LOW);
+  }
+}

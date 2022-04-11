@@ -1,0 +1,20 @@
+int BASE = 13;  
+
+void setup()
+{
+   for (int i = BASE; i >= 3; i=i-2){
+     pinMode(i, OUTPUT);   
+   }
+}
+
+void loop()
+{
+   for (int i = BASE; i >= 3; i=i-2){
+     digitalWrite(i, LOW);    
+     delay(200);        
+   }
+   for (int i = BASE; i >= 3; i=i-2){
+     digitalWrite(i, HIGH);    
+     delay(200);        
+   }  
+}

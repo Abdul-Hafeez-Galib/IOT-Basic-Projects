@@ -1,0 +1,18 @@
+int potPin = 0; 
+
+void setup()
+{
+	Serial.begin(9600);
+}
+
+void loop()
+{
+  int val;
+  int dat;
+  val=analogRead(0);
+  dat=val/2.048;
+  Serial.print("Temp:");
+  Serial.print(dat);
+  Serial.println(" degree C");
+  delay(500);
+}

@@ -766,4 +766,4 @@ void loop()
   delay(2000);
 }
 ```
-Really enjoyed working with these projects. :smiley: 
+Really enjoyed working with these projects. 😃
